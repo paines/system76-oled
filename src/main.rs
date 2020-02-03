@@ -290,17 +290,11 @@ fn main() {
     let model = model.trim();
 
     let output_opt = match (vendor, model) {
-        ("System76", "addw1") => Some("eDP-1"),
+        ("Del Inc.", "") => Some("eDP-1"),
         _ => None,
     };
 
-    let output = if let Some(output) = output_opt {
-        info!("Vendor '{}' Model '{}' has OLED display on '{}'", vendor, model, output);
-        output
-    } else {
-        debug!("Vendor '{}' Model '{}' does not have OLED display", vendor, model);
-        process::exit(0);
-    };
+    let output = "eDP-1";
 
     let mut inotify = Inotify::init()
         .expect("failed to initialize inotify");
