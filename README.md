@@ -12,8 +12,9 @@ This can be achieved via and nvidia-drivers (440.xx) pulled from experimental
 
 Add:
  /usr/share/X11/xorg.conf.d/11-nvidia-offload.conf
+ ```
  Section "ServerLayout"
     Identifier "layout"
     Option "AllowNVIDIAGPUScreens"
 EndSection
-
+```
