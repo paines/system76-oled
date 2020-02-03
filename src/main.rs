@@ -290,7 +290,7 @@ fn main() {
     let model = model.trim();
 
     let output_opt = match (vendor, model) {
-        ("Del Inc.", "") => Some("eDP-1"),
+        ("Dell Inc.", "") => Some("eDP-1"),
         _ => None,
     };
 
